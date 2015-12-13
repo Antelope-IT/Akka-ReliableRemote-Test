@@ -23,7 +23,6 @@ namespace AIT.ActorTest.Shared.Actors
         {
             Command<TestMessage>(test => {
                 Persist(test, tm =>  Deliver(destination, deliveryId => new ConfirmableMessage(deliveryId, tm)));
-                Sender.Tell(test);
             });
 
             Command<ConfirmationMessage>(ack =>

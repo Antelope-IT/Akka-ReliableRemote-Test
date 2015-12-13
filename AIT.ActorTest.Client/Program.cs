@@ -33,9 +33,6 @@ namespace AIT.ActorTest.Client
             Console.WriteLine("Click Return to send message to remote server...");
             Console.ReadLine();
 
-
-
-
             do
             {
                 var actorToUse = clientSystem.ActorSelection(local.Path).ResolveOne(TimeSpan.FromSeconds(5)).ContinueWith(result =>
