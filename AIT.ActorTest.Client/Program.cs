@@ -96,12 +96,12 @@ namespace AIT.ActorTest.Client
             do
             {
                 // This will fail
-                local.Ask(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
-                local.Ask(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
-                local.Ask(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
-                local.Ask(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
-                local.Ask(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
-                local.Ask(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
+                local.Tell(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
+                local.Tell(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
+                local.Tell(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
+                local.Tell(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
+                local.Tell(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
+                local.Tell(new TestMessage(Guid.NewGuid(), "This is message: " + messageCount++));
 
                 Console.WriteLine("Click Return to send message reliable messages remotely...");
                 Console.ReadLine();
